@@ -23,11 +23,35 @@ var times = 1
 class StartHolder {
 }
 
-在线挂机时间，得到 点数
+// 在线挂机时间，得到 点数
 func idle{
 exp +=50
 }
-
-func stonePushHeart（monster:Monster, expTimes: Int) {
+// 吸入体内的动物数量 级别增加
+func Monster（monster:Monster, expTimes: Int) {
 expe += (monster.rawValue * expTimes)
 }
+
+// 定义了一个顽主xiaoming 
+var xiaoming = StoneHolder()
+xiaoming.idle()
+xiaoming.take(monster: Monster.snake, expTimes: 2)
+xiaoming.expTimes.open = true
+xiaoming.expTimes.times = 2
+xiaoming.take(monster: Monster.lion, expTimes: 2)
+
+// 定义另一顽主 daming
+var daming = StoneHolder()
+daming.idle()
+daming.take(monster: Monster.snake, expTimes: 5)
+daming.expTimes.open = true
+daming.expTimes.time = 5
+daming.kill(monster: Monster.lion, expTimes :5)
+
+
+
+
+
+
+
+
