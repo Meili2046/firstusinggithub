@@ -1,0 +1,15 @@
+//打逗升值
+enum Monster : Int {
+case bug = 1
+monkey = 5
+snake = 10
+lion = 20
+dragon 1000
+}
+
+
+// 经验倍数开启模式
+struct ExpTimes {
+var open = false
+var times = 1
+}
