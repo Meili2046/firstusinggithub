@@ -1,6 +1,8 @@
-//最初，每个顽主，是石头，只有亲自对准动物心脏，推进，动物就会存储在你的石头，石头就会变得强大，第一个动物石头就会发光，动物越多越亮，最后石头变成心形，初级灵性，自己飞主动去吸碰动物，如果被更加强大动物吃掉，减级别，甚至回到不发光。初级变成小星星代表升级。你的生命里升空，你可以看到你的星光，再继续升级你的星光。
+// -.- ^-^...小顽主玩玩,first time, no experience, for fun,just study swift 3 months 11/24/2018.
+// Wow even idea not good ,but very fun , I love it 11/24/2018 
+// 最初，每个顽主,手持小石子，只有亲自对准动物心脏，推进，动物就会存储在你的石头，石头就会变得强大，达到100点动物石头就会发光，动物越多越亮，最后石头变红心在100点，初级灵性，自己飞主动去吸碰动物，如果被更加强大动物吃掉，减点数，甚至回到不发光。如果石头碰撞动物并杀死，得到2倍点数，但是石头是空的。最后石头变成黑色的石头。初级变成小星星代表升级。你的生命里升空，你可以看到你的星光，再继续升级你的星光。
 
-enum  Monster: Int {
+enum  Monster: Int { // 生命里提升值
 case bug = 1
 monkey = 5
 snake = 10
@@ -18,36 +20,38 @@ var times = 1 // 经验倍数默认1
 //定义游戏：
 // 星光顽主，利用星星的光，击中动物或者危险东西，之后手上的石头变成越来越强大的星光，最后可以达到宇宙霸主级别，号令整个宇宙。
 class StoneHolder {
-var exp = 0 // 游戏属性：总经验
+var exp = 0 // 游戏属性：总经验初始值是0
 var times = 1    // 游戏属性，经验倍数
 }
 class StartHolder {
 }
 
-// 在线挂机时间，得到 点数
+// 在线挂机什么不做，得到50点经验
 func idle{
-exp +=50
+exp +=500
+print("在线挂机成功1次，总经验为 \(exp)") //提示：挂机成功
 }
 // 吸入体内的动物数量 级别增加
-func Monster（monster:Monster, expTimes: Int) {
-expe += (monster.rawValue * expTimes)
+func monster（monster:Monster, expTimes: Int) { //自带翻倍倍数，
+expe += (monster.rawValue * expTimes) //乘以自带的经验倍数
+print(“当前总经验为\(exp)”) // 打印提示：现在的总经验值
 }
 
-// 定义了一个顽主xiaoming 
-var xiaoming = StoneHolder()
-xiaoming.idle()
-xiaoming.take(monster: Monster.snake, expTimes: 2)
-xiaoming.expTimes.open = true
-xiaoming.expTimes.times = 2
-xiaoming.take(monster: Monster.lion, expTimes: 2)
+// 实例化一个顽主xiaowanzhu 
+var xiaowanzhu = StoneHolder()
+xiaowanzhu.idle() // 挂机一次 500
+xiaowanzhu.take(monster: Monster.snake, expTimes: 2) // 总经验520=（挂机)500+(蛇)10*2=20(顽主经验翻2倍）
+xiaowanzhu.expTimes.open = true //服务器多倍经验开启
+xiaoming.expTimes.times = 2     //服务器开启经验倍数2倍
+xiaowanzhu.take(monster: Monster.lion, expTimes: 2) // 现在总经验：520+(lion)20*2(2倍经验)=520+40=560
 
-// 定义另一顽主 daming
-var daming = StoneHolder()
-daming.idle()
-daming.take(monster: Monster.snake, expTimes: 5)
-daming.expTimes.open = true
-daming.expTimes.time = 5
-daming.kill(monster: Monster.lion, expTimes :5)
+// 实例化另一顽主dawanzhu
+var dawanzhu = StoneHolder()
+dawanzhu.idle()// 挂机一次 500
+dawanzhu.take(monster: Monster.snake, expTimes: 5)// 总经验550=(挂机)500+(蛇)10*5=50(顽主经验翻5倍）
+dawanzhu.expTimes.open = true  //服务器多倍经验开启
+dawanzhu.expTimes.time = 5    //服务器开启经验倍数5倍（牛逼钱多 ～。～）
+dawanzhu.kill(monster: Monster.lion, expTimes :5)// 现在总经验：550+(lion)20*5(5倍经验)=550+100=650
 
 
 
