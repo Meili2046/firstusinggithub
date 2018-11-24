@@ -10,15 +10,16 @@ dragon 1000
 
 
 // 经验倍数开启模式
-struct ExpTimes {
-var open = false
-var times = 1
+struct ExpTimes { //吸引顽主，经验值倍数加倍或者再某个时间段
+var open = false // 是否开启多倍经验
+var times = 1 // 经验倍数默认1
 }
 
+//定义游戏：
 // 星光顽主，利用星星的光，击中动物或者危险东西，之后手上的石头变成越来越强大的星光，最后可以达到宇宙霸主级别，号令整个宇宙。
 class StoneHolder {
-var expTimes = 0
-var times = 1
+var exp = 0 // 游戏属性：总经验
+var times = 1    // 游戏属性，经验倍数
 }
 class StartHolder {
 }
