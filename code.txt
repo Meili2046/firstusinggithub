@@ -1,4 +1,4 @@
-// -.- ^-^...小顽主玩玩,first time, no experience, for fun,just study swift 3 months 11/24/2018.
+// -.- ^-^...顽主,first time, no experience, for fun,just study swift 3 months 11/24/2018.
 // Wow even idea not good ,but very fun , I love it 11/24/2018 
 // 最初，每个顽主,手持小石子，只有亲自对准动物心脏，推进，动物就会存储在你的石头，石头就会变得强大，
 达到100点动物石头就会发光，动物越多越亮，最后石头变红心在100点，初级灵性，自己飞主动去吸碰动物，
